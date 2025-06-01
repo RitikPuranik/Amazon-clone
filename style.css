@@ -1,10 +1,12 @@
-*{
+* {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    border: border-box;
+    box-sizing: border-box;
 }
-.navbar{
-    height:60px;
+
+/* Navbar */
+.navbar {
+    height: 60px;
     background: black;
     color: white;
     display: flex;
@@ -12,70 +14,65 @@
     justify-content: space-evenly;
 }
 
-/* box-1 */
-
-.nav-logo{
+/* Logo */
+.nav-logo {
     height: 50px;
     width: 100px;
 }
-.logo{
-    background-image:url("amazon_logo.png");
+.logo {
+    background-image: url("amazon_logo.png");
     background-size: cover;
-    height: 50px;
+    height: 60px;
     width: 100%;
 }
-.border{
+.border {
     border: 1.5px solid transparent;
 }
-.border:hover{
+.border:hover {
     border: 1.5px solid white;
 }
 
-/* box-2 */
-
-.nav-address{
+/* Address */
+.nav-address {
     height: 50px;
 }
-.add-icon{
+.add-icon {
     display: flex;
     align-items: center;
-    
 }
-.add-first{
+.add-first {
     color: rgb(176, 179, 180);
-    size: 0.85rem;
+    font-size: 0.85rem;
     margin-left: 15px;
     margin-top: 7px;
 }
-.add-second{
+.add-second {
     color: aliceblue;
-    size: 1rem;
+    font-size: 1rem;
     margin-left: 3px;
 }
 
-/* box-3 */
-
-.nav-search{
+/* Search */
+.nav-search {
     display: flex;
     justify-content: space-evenly;
-    /* background-color: pink; */
     height: 40px;
     width: 620px;
     border-radius: 5px;
 }
-.search-select{
+.search-select {
     width: 60px;
     text-align: center;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     border: none;
 }
-.search-input{
+.search-input {
     width: 100%;
-    font-size: 1 rem;
+    font-size: 1rem;
     border: none;
 }
-.search-icon{
+.search-icon {
     width: 45px;
     display: flex;
     justify-content: center;
@@ -86,44 +83,36 @@
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
 }
-.nav-search:hover{
+.nav-search:hover {
     border: 2px solid orange;
 }
 
-/* box4 */
-.nav-signin{
+/* Sign In */
+.nav-signin, .nav-return {
     height: 50px;
     margin-top: 10px;
 }
-span{
+span {
     font-size: 0.8rem;
 }
-.nav-second{
-    font-size: 1 rem;
+.nav-second {
+    font-size: 1rem;
     font-weight: 700;
 }
 
-/* box 5 */
-
-.nav-return{
-    height: 50px;
-    margin-top: 10px;
-}
-
-/* box 6 */
-
-.nav-cart i{
-    font-size: 30px;
-}
-.nav-cart{
+/* Cart */
+.nav-cart {
     margin-top: 20px;
     font-size: 0.85rem;
     font-weight: 700;
     height: 50px;
 }
+.nav-cart i {
+    font-size: 30px;
+}
 
-/* panel */
-.panel{
+/* Panel */
+.panel {
     height: 40px;
     background-color: #222f3d;
     display: flex;
@@ -131,15 +120,111 @@ span{
     align-items: center;
     justify-content: space-evenly;
 }
-.panel-options p{
+.panel-options {
+    width: 75%;
+    font-size: 0.85rem;
+}
+.panel-options p {
     display: inline;
     margin: 15px;
 }
-.panel-options {
-    width: 75%;
-    font-size: 0,85rem;
-}
-.panel-deals{
+.panel-deals {
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%),
+                url('hero_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-msg {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    width: 90%;
+    margin-bottom: 40px;
+    z-index: 2;
+    position: relative;
+}
+.hero-msg a {
+    color: #007185;
+}
+
+/* Shop Section */
+.shop-section {
+    margin-top: -30px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    z-index: 3;
+    position: relative;
+}
+
+.box {
+    width: 23%;
+    background-color: white;
+    padding: 20px 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+}
+
+.box-content {
+    margin: 0;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* Grid items inside boxes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.item {
+    text-align: center;
+}
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.item p {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.box a {
+    display: block;
+    margin-top: 10px;
+    color: #007185;
+    font-weight: 500;
+    text-decoration: none;
 }
