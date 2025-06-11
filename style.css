@@ -4,6 +4,9 @@
     box-sizing: border-box;
     /* background-color: pink; */
 }
+body{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 15%,rgb(248, 200, 210));
+}
 
 /* Navbar */
 .navbar {
